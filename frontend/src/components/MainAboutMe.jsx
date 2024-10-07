@@ -163,7 +163,16 @@ const MainAboutMe = () => {
           >
             Bootstrap
           </motion.span>
+          <motion.span
+            variants={childVariants}
+            initial={{ y: -2000 }}
+            animate="animated"
+            transition={{ delay: 6, duration: 2 }}
+          >
+            Node js
+          </motion.span>
         </motion.div>
+
         <div className=" py-2 px-5 top-80 md:top-60 right-48 w-48 absolute  rounded-2xl">
           <img
             src={mu_logo}
@@ -182,7 +191,7 @@ const MainAboutMe = () => {
           variants={childVariants}
           initial={{ y: 2000 }}
           animate="animated"
-          transition={{ delay: 6, duration: 2 }}
+          transition={{ delay: 6.5, duration: 2 }}
           className="bg-gray-100 py-2 px-5 md:top-40 top-72 right-3 md:right-48 w-52 absolute  rounded-2xl"
         >
           <span>Link To my Github</span> <br />

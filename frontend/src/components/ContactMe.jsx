@@ -35,10 +35,14 @@ const ContactMe = () => {
         <div className="flex flex-col gap-3">
           <h1 className="font-semibold">Location</h1>
           <div className="flex flex-col gap-3">
-            <span>Country : Ethiopia</span>
+            <span>
+              Country : <span className="font-semibold"> Ethiopia</span>
+            </span>
             <div>
-              <span>City : Addis Ababa</span>
-              <span>Akaki Qaliti</span>
+              <span>
+                City :{" "}
+                <span className="font-semibold">Addis Ababa, Akaki Qaliti</span>
+              </span>
             </div>
           </div>
         </div>

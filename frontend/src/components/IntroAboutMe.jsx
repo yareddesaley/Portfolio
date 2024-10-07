@@ -57,13 +57,13 @@ const IntroAboutMe = () => {
                 CGPA: 3.39
               </div>
               <div className="bg-gray-300 py-2 px-5 w-64 absolute -top-32 -left-20 rounded-2xl">
-                Campus Mekelle Institute Of Techhnology
+                Campus : Mekelle Institute Of Techhnology (MIT)
               </div>
               <div className="bg-gray-300 py-2 px-5 w-64 absolute  rounded-2xl">
                 Grade 12 Result: 504/700
               </div>
               <div className="bg-gray-300 py-2 px-5 w-56 md:-top-52 -top-12 -left-40 md:-left-56 absolute  rounded-2xl">
-                Grade 10 Result:4 / 4
+                Grade 10 Result: 4 / 4
               </div>
               <div className="bg-gray-300 py-2 px-5 w-64 absolute -left-24 md:-left-0 -top-80 rounded-2xl">
                 Bachelor Degree In Information Technology
