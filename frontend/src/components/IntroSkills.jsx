@@ -37,14 +37,14 @@ const variants = {
 
 const IntroSkills = () => {
   return (
-    <div className="bg-gray-200 mt-10">
-      <div className="flex flex-col-reverse md:flex md:flex-row md:gap-28 md:justify-center items-center h-screen mx-14 text-gray-700">
+    <div className="bg-gray-200 mt-5 mx-[2%] rounded-xl min-h-content py-10">
+      <div className="flex flex-col-reverse  lg:flex lg:flex-row lg:gap-28 lg:justify-center items-center  mx-14 text-gray-700">
         <p className="text-lg font-serif">
           <motion.div
             variants={variants}
             initial="initialleft"
             whileInView="animate"
-            className="flex flex-col items-center"
+            className="flex flex-col items-center bg-white p-6 rounded-xl"
           >
             <span className="text-xl font-bold text-green-700">
               Digital Skills
@@ -69,7 +69,7 @@ const IntroSkills = () => {
             variants={variants}
             initial="initialleft"
             whileInView="animate"
-            className="flex flex-col items-center"
+            className="flex flex-col items-center bg-white p-6 rounded-xl mt-5"
           >
             <span className="text-xl font-bold text-green-700">
               Programming skills
@@ -95,7 +95,7 @@ const IntroSkills = () => {
           whileInView="animate"
           src={Pc}
           alt="a man while codding"
-          className="h-96 rounded-3xl ml-12 mb-5 hidden md:flex"
+          className="h-96 rounded-3xl ml-12 mb-5 hidden lg:flex"
         />
       </div>
     </div>

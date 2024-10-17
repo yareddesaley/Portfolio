@@ -19,19 +19,19 @@ const nameVariants = {
 const NavBar = () => {
   const [state, setState] = useState(false);
   return (
-    <div className="w-full bg-green-200  fixed top-0 left-0 z-10 ">
-      <div className="flex  justify-between mx-10">
-        <div className="flex gap-3 items-center py-1 ">
-          <img
-            src={profile_photo}
-            alt="an image of the ouner of this website"
-            className="w-20 h-20 rounded-full"
-          />
+    <div className="w-full mb-[2%] bg-gray-100 py-3 sticky top-0 left-0 z-10 ">
+      <div className="flex  justify-between mx-10 items-center">
+        <div className="flex  items-center justify-center  ">
           <p className="text-lg font-serif">Yared Desaley Gebreslassie</p>
         </div>
         <div>
-          <div onClick={() => setState(!state)} className="relative md:hidden">
-            <img src={down} alt="dropdown" className="h-10 text-white mt-4" />
+          <div
+            onClick={() => {
+              setState(!state);
+            }}
+            className="relative   md:hidden"
+          >
+            <img src={down} alt="dropdown" className="h-10  text-white" />
             {state ? (
               <motion.div
                 initial={{ x: 100, y: 0, opacity: 0 }}
@@ -42,7 +42,7 @@ const NavBar = () => {
                   stiffness: 400,
                 }}
                 exit={{
-                  y: 100,
+                  x: 100,
                   transition: {
                     ease: "easeOut",
                     duration: 1.5,
@@ -56,7 +56,7 @@ const NavBar = () => {
                 >
                   <img src={cancell} alt="cncell but" className="h-10" />
                 </button>
-                <button className="transition hover:text-white  text-xl font-bold ">
+                <button className="transition hover:-translate-y-1  text-xl font-bold ">
                   <Link to="/">Home</Link>
                 </button>
                 <button className="transition hover:-translate-y-1 hover:scale-110 text-xl font-bold">
@@ -76,6 +76,7 @@ const NavBar = () => {
           <button className="transition hover:-translate-y-1 hover:scale-110 text-xl font-bold">
             <Link to="/aboutme">About me</Link>
           </button>
+
           <button className="transition hover:-translate-y-1 hover:scale-110 text-xl font-bold">
             <Link to={"/contactme"}>Contacts</Link>
           </button>

@@ -38,10 +38,10 @@ const MainAboutMe = () => {
     <motion.div
       variants={about_Variants}
       exit="exit"
-      className="mt-24 py-14 pl-10 pr-0 md:flex md:flex-row md:gap-20 flex flex-col-reverse bg-gray-200"
+      className=" py-14 px-10 mx-[2%]  rounded-xl lg:flex lg:flex-row lg:gap-20 flex flex-col-reverse bg-gray-200 overflow-y-clip"
       onClick={window.scroll(0, 0)}
     >
-      <div className="w-full md:w-1/2 font-serif text-lg mt-[450px] md:mt-0">
+      <div className="w-full lg:w-1/2 font-mono text-lg mt-[450px] lg:mt-0">
         <motion.p
           variants={about_Variants}
           initial="initial"
@@ -68,13 +68,21 @@ const MainAboutMe = () => {
           and professional growth.
         </motion.p>
       </div>
-      <div className="relative w-full md:w-[47%] rounded-2xl p-5  mt-5 md:bg-white h-auto">
+      <motion.div
+        initial={{ x: 200, opacity: 0 }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 0.5, delay: 0.5 },
+        }}
+        className="relative w-full lg:w-[47%] rounded-2xl p-5  mt-5 lg:bg-white h-auto"
+      >
         <motion.div
           variants={childVariants}
           initial={{ y: 2000 }}
           animate="animated"
           transition={{ delay: 1, duration: 2 }}
-          className="bg-gray-100 py-2 px-5 md:right-24 w-64 absolute  rounded-2xl right-3"
+          className="bg-gray-100 py-2 px-5 md:right-24 w-64 absolute  rounded-2xl -right-10 z-10"
         >
           Graduated From Mekelle University
         </motion.div>
@@ -83,7 +91,7 @@ const MainAboutMe = () => {
           initial={{ y: -3000 }}
           animate="animated"
           transition={{ delay: 1.5, duration: 2 }}
-          className="bg-gray-100  px-6 py-1 top-28 absolute  rounded-2xl items-center flex flex-col gap-3"
+          className="bg-gray-100  px-6 -left-5 md:-left-0 py-1 top-28  absolute  rounded-2xl items-center flex flex-col gap-3"
         >
           <motion.span
             variants={childVariants}
@@ -93,7 +101,7 @@ const MainAboutMe = () => {
           >
             Exprianced In
           </motion.span>
-          <hr className="border-t-2 border-gray-400 w-full" />
+          <hr className="border-t-2 border-green-500 w-full" />
           <motion.span
             variants={childVariants}
             initial={{ y: -2000 }}
@@ -126,7 +134,7 @@ const MainAboutMe = () => {
           initial={{ y: -3000 }}
           animate="animated"
           transition={{ delay: 4, duration: 2 }}
-          className="bg-gray-100 px-6 py-1 top-28 -right-10 mr-10 absolute  rounded-2xl items-center flex flex-col gap-3"
+          className="bg-gray-100 px-3 py-1 top-28 -right-10 md:-right-5 mr-10 absolute  rounded-2xl items-center flex flex-col gap-3"
         >
           <motion.span
             variants={childVariants}
@@ -136,7 +144,7 @@ const MainAboutMe = () => {
           >
             Exprianced In
           </motion.span>
-          <hr className="border-t-2 border-gray-400 w-full" />
+          <hr className="border-t-2 border-green-500 w-full" />
           <motion.span
             variants={childVariants}
             initial={{ y: -2000 }}
@@ -173,14 +181,14 @@ const MainAboutMe = () => {
           </motion.span>
         </motion.div>
 
-        <div className=" py-2 px-5 top-80 md:top-60 right-48 w-48 absolute  rounded-2xl">
+        <div className=" py-2 px-5 top-80 lg:top-60 -left-14 lg:left-[28%] w-48 absolute  rounded-2xl">
           <img
             src={mu_logo}
             alt="mekelle university logo"
             className="rounded-full"
           />
         </div>
-        <div className=" py-2 px-5 -left-14  md:right-96 md:-left-5 -top-1 w-36 absolute  rounded-2xl">
+        <div className=" py-2 px-5 -left-14  lg:right-96 lg:-left-5 -top-1 w-36 absolute  rounded-2xl">
           <img
             src={mit_logo}
             alt="mekelle university logo"
@@ -192,7 +200,7 @@ const MainAboutMe = () => {
           initial={{ y: 2000 }}
           animate="animated"
           transition={{ delay: 6.5, duration: 2 }}
-          className="bg-gray-100 py-2 px-5 md:top-40 top-72 right-3 md:right-48 w-52 absolute  rounded-2xl"
+          className="bg-gray-100 py-2 px-5  top-96 -right-8 lg:right-44 w-52 absolute  rounded-2xl"
         >
           <span>Link To my Github</span> <br />
           <a
@@ -203,7 +211,7 @@ const MainAboutMe = () => {
             here
           </a>
         </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

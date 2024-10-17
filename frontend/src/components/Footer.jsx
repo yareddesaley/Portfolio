@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className=" bg-gray-200">
       <hr className="w-full border-t-2 border-green-500 mt-10 " />
-      <div className="flex flex-col gap-10 md:flex md:flex-row justify-center md:gap-72 pt-3 pb-20 md:ml-20 items-center ">
+      <div className="flex flex-col gap-10 lg:flex md:flex-row justify-center lg:gap-72 pt-3 pb-20 lg:ml-20 items-center ">
         <div className="flex flex-col  items-center">
           <h1>Contacts</h1>
           <hr className="border-b-2 border-green-500 w-1/5 mt-2" />
@@ -24,7 +24,7 @@ const Footer = () => {
               <br />
               <span>Yared.desu@gmail.com</span>
               <br />
-              <span>Telegram UserName:</span>
+              <span>Telegram :</span>
               <br />
               <span>t.me/Yadu_follow</span>
               <br />

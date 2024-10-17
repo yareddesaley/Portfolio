@@ -1,27 +1,25 @@
 import React from "react";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer";
-import { AnimatePresence } from "framer-motion";
-import MainAboutMe from "./components/MainAboutMe";
-import ContactMe from "./components/ContactMe";
+import MainAboutMe from "./pages/MainAboutMe";
+import ContactMe from "./pages/ContactMe";
 const App = () => {
-  const location = useLocation();
   return (
-    <div className=" overflow-x-clip">
-      <NavBar />
+    <BrowserRouter>
+      <div className=" overflow-x-clip">
+        <NavBar />
 
-      <AnimatePresence>
-        <Routes location={location} key={location.key}>
+        <Routes>
           <Route element={<Home />} path={"/"} />
           <Route element={<MainAboutMe />} path={"/aboutme"} />
           <Route element={<ContactMe />} path={"/contactme"} />
         </Routes>
-      </AnimatePresence>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 };
 
